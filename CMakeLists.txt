@@ -12,6 +12,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 
 set(TARGET_AUTO_FUNC_VS_LAMBDAS auto_func_vs_lambdas)
+set(TARGET_DEFERRED_TYPE_CHECK deferred_type_check)
 
 
 
@@ -24,6 +25,7 @@ link_directories( ${LIB_DIR} )
 set(CMAKE_CXX_FLAGS "-fPIC -O3 -Wall -Wno-unused-function -std=c++20")
 
 set(SOURCES_AUTO_FUNC_VS_LAMBDAS ${SRC_DIR}/AutoFunctionsVsLambdas.cpp)
+set(SOURCES_DEFERRED_TYPE_CHECK ${SRC_DIR}/DeferredTypeChecksWithAuto.cpp)
 
 
 
@@ -32,6 +34,7 @@ set(SOURCES_AUTO_FUNC_VS_LAMBDAS ${SRC_DIR}/AutoFunctionsVsLambdas.cpp)
 #add_library(${TARGET_LIB} STATIC ${SOURCES_LIB})
 
 add_executable(${TARGET_AUTO_FUNC_VS_LAMBDAS} ${SOURCES_AUTO_FUNC_VS_LAMBDAS})
+add_executable(${TARGET_DEFERRED_TYPE_CHECK} ${SOURCES_DEFERRED_TYPE_CHECK})
 
 
 
