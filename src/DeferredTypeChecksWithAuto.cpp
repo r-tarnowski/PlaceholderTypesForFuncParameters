@@ -65,7 +65,7 @@ public:
 };
 
 /*
-// The first fix: define C1::foo it outside, after C2 definition
+// The first fix: define C1::foo outside, after C2 definition
 void C1::foo( const C2 & c2 ) const {
    std::cout << "C1::foo called" << std::endl;
    c2.print();
